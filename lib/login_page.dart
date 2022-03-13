@@ -18,15 +18,20 @@ class _LoginPageState extends State<LoginPage> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.deepPurple.shade300,
           title: const Text("Login Page"),
         ),
-        body: Column(children: [
-          const LogoImageAssets(),
-          _usernameField(),
-          _passwordField(),
-          _loginButton(context),
-          _forgotPassword(),
-        ]),
+        body: SingleChildScrollView(
+          child: Column(
+            children: [
+              const LogoImageAssets(),
+              _usernameField(),
+              _passwordField(),
+              _loginButton(context),
+              _forgotPassword(),
+            ],
+          ),
+        ),
       ),
     );
   }
@@ -48,8 +53,9 @@ class _LoginPageState extends State<LoginPage> {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(8.0)),
-            borderSide:
-            BorderSide(color: (isLoginSuccess) ? Colors.blue : Colors.red),
+            borderSide: BorderSide(
+                color:
+                    (isLoginSuccess) ? Colors.deepPurple.shade300 : Colors.red),
           ),
         ),
       ),
@@ -74,8 +80,9 @@ class _LoginPageState extends State<LoginPage> {
           ),
           enabledBorder: OutlineInputBorder(
             borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-            borderSide:
-            BorderSide(color: (isLoginSuccess) ? Colors.blue : Colors.red),
+            borderSide: BorderSide(
+                color:
+                    (isLoginSuccess) ? Colors.deepPurple.shade300 : Colors.red),
           ),
         ),
       ),
@@ -86,7 +93,7 @@ class _LoginPageState extends State<LoginPage> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 20),
       child: MaterialButton(
-        color: Colors.blue,
+        color: Colors.deepPurple.shade300,
         onPressed: () {
           String text = "";
           if (username == "123" && password == "123") {
@@ -110,7 +117,12 @@ class _LoginPageState extends State<LoginPage> {
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);
         },
-        child: const Text('Login'),
+        child: const Text(
+          'Login',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
       ),
     );
   }
@@ -120,12 +132,16 @@ class _LoginPageState extends State<LoginPage> {
       padding: const EdgeInsets.symmetric(horizontal: 100, vertical: 10),
       child: TextButton(
         onPressed: () {},
-        child: const Text("Forgot Password"),
+        child: const Text(
+          "Forgot Password",
+          style: TextStyle(
+            color: Colors.deepPurple,
+          ),
+        ),
       ),
     );
   }
 }
-
 
 class LogoImageAssets extends StatelessWidget {
   const LogoImageAssets({Key? key}) : super(key: key);
