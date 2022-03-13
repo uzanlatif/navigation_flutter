@@ -1,4 +1,4 @@
-# twitterclone
+# noteapp clone
 
 A new Flutter project.
 
