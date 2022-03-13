@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
         appBar: AppBar(
           backgroundColor: Colors.deepPurple.shade300,
           centerTitle: true,
-          title: const Text("Notepad Hello"),
+          title: const Text("Today Schedule"),
           actions: <Widget>[
             IconButton(
                 onPressed: () {},
@@ -30,9 +30,9 @@ class _HomePageState extends State<HomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              createCard("Naruto","https://pict-a.sindonews.net/dyn/360/pena/news/2022/01/27/700/669527/7-kelemahan-terbesar-naruto-uzumaki-di-serial-naruto-kno.jpg"),
-              createCard("Akatsuki","https://imgx.sonora.id/crop/0x0:0x0/700x465/photo/2021/08/22/akatsuki-rankedjpg-20210822082530.jpg"),
-              createCard("Spongebob","https://statik.tempo.co/data/2018/11/29/id_800478/800478_720.jpg"),
+              createCard("Playing w/ Cat","https://img-9gag-fun.9cache.com/photo/aGpdDgw_460s.jpg"),
+              createCard("Gaming","https://i.redd.it/yrecb4xm7wh31.jpg"),
+              createCard("Study","https://c.tenor.com/oezioEDfJ3sAAAAd/crying-cry.gif"),
             ],
           ),
         ),
